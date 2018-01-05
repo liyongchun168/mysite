@@ -62,13 +62,21 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#        'ENGINE': 'django.db.backends.sqlite3',
+	'ENGINE': 'django.db.backends.mysql',
+	'NAME': 'mysite',
+	'USER': 'root',
+	'PASSWORD': 'Jfkdas@123'
+#  	'OPTIONS': {
+#	              "init_command": "SET default_storage_engine=InnoDB",
+#		                  },
+#          "STORAGE_ENGINE": "InnoDB",
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
 # Internationalization
-# https://docs.djangoproject.com/en/dev/topics/i18n/
+# hottps://docs.djangoproject.com/en/dev/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
