@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'mysite.books',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -66,7 +67,7 @@ DATABASES = {
 	'ENGINE': 'django.db.backends.mysql',
 	'NAME': 'mysite',
 	'USER': 'root',
-	'PASSWORD': 'Jfkdas@123'
+	'PASSWORD': 'Jfkdsa@123'
 #  	'OPTIONS': {
 #	              "init_command": "SET default_storage_engine=InnoDB",
 #		                  },
