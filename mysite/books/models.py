@@ -6,7 +6,7 @@ class Publisher(models.Model):
 	city = models.CharField(max_length=60)
 	state_province = models.CharField(max_length=30)
 	country = models.CharField(max_length=50)
-	wetsite = models.URLField()
+	website = models.URLField()
 	
 	def __unicode__(self):
 		return self.name
@@ -14,10 +14,10 @@ class Publisher(models.Model):
 class Author(models.Model):
 	first_name = models.CharField(max_length=30)
 	last_name = models.CharField(max_length=40)
-	email = models.EmailField()
+	email = models.EmailField(blank=True)
 
 	def __unicode__(self):
-		return u'%s %s' %(self.firs_name, self.last_name)
+		return u'%s %s' %(self.first_name, self.last_name)
 
 class Book(models.Model):
 	title = models.CharField(max_length=100)
