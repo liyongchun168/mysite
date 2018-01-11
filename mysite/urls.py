@@ -4,6 +4,7 @@ from django.contrib import admin
 from mysite.view import hello
 from mysite.date import current_datetime
 from mysite.time import current_datetime
+from mysite.display import display
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -15,4 +16,5 @@ urlpatterns = patterns('',
     url(r'^hello/$',hello),
     url(r'^date/$',current_datetime),
     url(r'^time/$',current_datetime),
+    url(r'^display/$',display),
 )
