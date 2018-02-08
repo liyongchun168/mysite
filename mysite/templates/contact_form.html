@@ -1,7 +1,8 @@
 {% extends "base.html" %}
-{% block titile %}The http contents{% endblock %}
+{% block titile %}Contact Us{% endblock %}
 {% block content %}
 <body>
+    <h1>Contact Us</h1>
     {% if errors %}
         <ul>
             {% for error in errors %}
@@ -9,9 +10,11 @@
             {% endfor %}
         </ul>
     {% endif %}
-	<form action="" method="get">
-        <input type="text" name="q">
-        <input type="submit" value="Search">
+    <form action="/contact/" method="post">
+	<p>Subject:<input type="text" name="subject"></p>
+	<p>Your e-mail (optional):<input type="text" name="email"></p>
+	<p>Message:<textarea name="message" rows="10" cols="50"></textarea></p>
+	<input type="submit" value="Submit">
     </form>
 </body>
 {% endblock %}

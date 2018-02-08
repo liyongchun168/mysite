@@ -5,7 +5,8 @@ from mysite.view import hello
 from mysite.date import current_datetime
 from mysite.time import current_datetime
 from mysite.display import display
-from mysite.books import views
+#from mysite import books
+from mysite.contact import views
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -19,5 +20,6 @@ urlpatterns = patterns('',
     url(r'^time/$',current_datetime),
     url(r'^display/$',display),
     #url(r'^search-form/$',views.search_form),
-    url(r'^search/$',views.search),
+    #url(r'^search/$',books.views.search),
+    url(r'^contact/$',views.contact),
 )
